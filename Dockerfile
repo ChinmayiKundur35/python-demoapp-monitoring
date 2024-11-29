@@ -5,7 +5,7 @@ FROM python:3.9-slim
 WORKDIR /app
 
 # Copy the requirements file to the working directory
-COPY src/requirements.txt .
+COPY src/requirements.txt ./
 
 # Install the dependencies
 RUN pip install --no-cache-dir -r requirements.txt
@@ -16,4 +16,4 @@ COPY src/. .
 # Expose the port your Flask app is running on (default Flask port is 5000)
 EXPOSE 5000
 
-CMD ["pyhton", "run.py"]
+CMD ["python", "run.py"]
